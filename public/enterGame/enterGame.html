@@ -1,0 +1,15 @@
+<h1>Enter A Game</h1>
+<hr/>
+<h3>Select the Players</h3>
+
+<div>Winner:</div>
+<select ng-model="winner" ng-options="team as team.name for team in teams.units">Pick the Winner</select>
+<div>{{winner.rating}}</div>
+
+<div>Loser:</div>
+<select ng-model="loser" ng-options="team as team.name for team in teams.units">Pick the Loser</select>
+<div>{{loser.rating}}</div>
+
+<hr/>
+
+<button ng-click="enterGame()">Submit Game</button>

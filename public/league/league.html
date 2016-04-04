@@ -1,0 +1,14 @@
+<h1>{{league.name}}</h1>
+<h3>{{league.type}}</h3>
+
+<a href="#/enterGame"><button>Enter Game</button></a>
+
+<div ng-repeat="player in league.units | orderBy: '-rating'">
+    <span>{{player.name}}</span><span>{{player.rating}}</span><span>{{player.games}}</span>
+</div>
+
+<div>
+    New Player/Team:
+</div>
+<input type="text" ng-model="newPlayer">
+<button ng-click="addPlayer()"> Add Unit</button>
